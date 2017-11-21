@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> Edit article</h1>
+  <%= form_for(@article) do |f| %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="form-group">
+    <strong><%= f.label 'Title' %></strong>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Enter the title" %>
+    <small id="articleHelp" class="form-text text-muted">Keep it simple.</small>
+  </div>
+  <div class="form-group">
+    <strong><%= f.label :content %></strong>
+    <%= f.text_field :content, class: 'form-control', placeholder: "The article" %>
+  </div>
+  <br/>
+  <%= f.submit class: "btn btn-primary"%>
+  <% end %>
+  <br/>
+</div>

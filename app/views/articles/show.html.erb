@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <div class="wrapper-grey">
+    <span><p><%= @article.content %></p></span>
+  </div>
+  <%= button_to 'edit', "#{@article.id}/edit", :method => "get", class: "btn btn-primary" %>
+</div>
+
+<%#  %>
